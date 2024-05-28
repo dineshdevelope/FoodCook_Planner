@@ -1,6 +1,6 @@
 /* const listItem = document.getElementById("listItem");
 
-console.time("normalway");
+console.time("normalway"); //to check code runtime
 const fragment = document.createDocumentFragment();
 
 for (let i = 1; i <= 1000; i++) {
@@ -16,5 +16,5 @@ for (let i = 1; i <= 1000; i++) {
   fragment.append(li);
 }
 listItem.append(fragment);
-console.timeEnd("normalway");
+console.timeEnd("normalway"); //to check code runtime
  */
