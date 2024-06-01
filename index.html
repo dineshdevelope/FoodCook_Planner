@@ -5,7 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
-    <link rel="stylesheet" href="./dist/assets/index-CFFxq1rt.css" />
+    <link rel="stylesheet" href="./dist/assets/index-phA2JXDQ.css" />
   </head>
   <body>
     <h1
@@ -19,7 +19,7 @@
           type="text"
           id="itemInput"
           placeholder="I like to eat"
-          class="bg-gray-200 p-4 rounded-md m-4"
+          class="bg-gray-200 p-4 rounded-md m-4 outline-none"
         />
         <button
           class="text-2xl font-extrabold bg-red-500 text-white rounded-xl hover:bg-red-950 cursor-pointer p-2"
@@ -28,47 +28,69 @@
           +
         </button>
       </div>
-    </form>
-    <!-- <h1
+
+      <!-- <h1
       class="font-semibold text-xl bg-slate-400 max-w-sm text-center p-2 text-blue-700 font-serif rounded m-4"
     >
       Total List :
     </h1> -->
-    <ul
-      class="font-mono max-w-md mx-auto bg-slate-100 m-5 p-2 shadow-2xl"
-      id="listItem"
-    >
-      <li
-        class="flex items-center justify-between bg-gray-600 p-2 rounded text-white max-w-sm mx-auto mt-2 mb-7 capitalize hover:bg-gray-700"
+
+      <ul
+        class="font-mono max-w-md mx-auto bg-slate-100 m-5 p-2 shadow-2xl"
+        id="listItem"
       >
-        Milk
-        <button
-          class="bg-red-600 w-10 p-2 rounded hover:bg-red-700 deleteBtn hover:font-extrabold"
+        <li
+          class="flex items-center justify-between bg-gray-600 p-2 rounded text-white max-w-sm mx-auto mt-2 mb-7 capitalize hover:bg-gray-700"
         >
-          x
-        </button>
-      </li>
-      <li
-        class="flex items-center justify-between bg-gray-600 p-2 rounded text-white max-w-sm mx-auto mt-2 mb-7 capitalize hover:bg-gray-700"
+          Maagi
+          <button
+            class="bg-red-600 w-10 p-2 rounded hover:bg-red-700 deleteBtn hover:font-extrabold"
+            onclick="removeItem(event)"
+          >
+            x
+          </button>
+        </li>
+        <li
+          class="flex items-center justify-between bg-gray-600 p-2 rounded text-white max-w-sm mx-auto mt-2 mb-7 capitalize hover:bg-gray-700"
+        >
+          Briyani
+          <button
+            class="bg-red-600 w-10 p-2 rounded hover:bg-red-700 deleteBtn hover:font-extrabold"
+            onclick="removeItem(event)"
+          >
+            x
+          </button>
+        </li>
+
+        <li
+          class="flex items-center justify-between bg-gray-600 p-2 rounded text-white max-w-sm mx-auto mt-2 mb-7 capitalize hover:bg-gray-700"
+        >
+          Curd Rise
+          <button
+            class="bg-red-600 w-10 p-2 rounded hover:bg-red-700 deleteBtn hover:font-extrabold"
+            onclick="removeItem(event)"
+          >
+            x
+          </button>
+        </li>
+      </ul>
+    </form>
+    <div class="flex justify-center mt-10">
+      <button
+        class="bg-red-700 p-2 rounded-lg text-white font-semibold hover:font-extrabold"
+        id="clearBtn"
       >
-        Tea
-        <button
-          class="bg-red-600 w-10 p-2 rounded hover:bg-red-700 deleteBtn hover:font-extrabold"
-        >
-          x
-        </button>
-      </li>
-      <li
-        class="flex items-center justify-between bg-gray-600 p-2 rounded text-white max-w-sm mx-auto mt-2 mb-7 capitalize hover:bg-gray-700"
-      >
-        Boost
-        <button
-          class="bg-red-600 w-10 p-2 rounded hover:bg-red-700 deleteBtn hover:font-extrabold"
-        >
-          x
-        </button>
-      </li>
-    </ul>
+        Clear All
+      </button>
+    </div>
+    <script>
+      function removeItem(event) {
+        event.target.parentNode.remove();
+        if (listItem.children.length === 0) {
+          clearBtn.style.display = "none";
+        }
+      }
+    </script>
     <script type="module" src="./src/js/main.js"></script>
   </body>
 </html>
